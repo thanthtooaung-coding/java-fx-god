@@ -1,0 +1,187 @@
+/* General Styling */
+.root {
+    -fx-font-family: 'Inter', 'Arial', sans-serif;
+    -fx-background-color: #f4f4f9;
+}
+
+/* ScrollPane Styling */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Menu Item Tile Styling */
+.menu-item {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0.5, 0, 2);
+    -fx-padding: 15px;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 15, 0.6, 0, 4);
+}
+
+.item-name {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.item-price {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555;
+}
+
+/* Order Pane Styling */
+.order-pane {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0 transparent transparent transparent;
+    -fx-border-width: 1px;
+}
+
+.header-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding-bottom: 10px;
+}
+
+/* ListView for Order */
+.list-view {
+    -fx-background-color: #fdfdfd;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 8px;
+}
+
+.list-view .list-cell {
+    -fx-font-size: 15px;
+    -fx-padding: 8px 15px; /* Adjusted padding */
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #f0f0f0 transparent;
+    -fx-border-width: 1px;
+}
+
+/* Remove hover effect from the whole cell since buttons handle actions now */
+.list-view .list-cell:filled:hover {
+    -fx-background-color: transparent;
+}
+
+/* --- STYLES FOR CUSTOM ORDER CELL --- */
+.order-cell-name {
+    -fx-font-weight: normal;
+    -fx-text-fill: #333;
+    -fx-alignment: center-left;
+}
+
+.order-cell-price {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-alignment: center-right;
+    -fx-min-width: 70px; /* Ensure price column aligns nicely */
+}
+
+/* --- NEW STYLES FOR QUANTITY CONTROLS --- */
+.quantity-button {
+    -fx-background-color: #ecf0f1;
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-background-radius: 50em; /* Makes it circular */
+    -fx-min-width: 26px;
+    -fx-min-height: 26px;
+    -fx-max-width: 26px;
+    -fx-max-height: 26px;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.quantity-button:hover {
+    -fx-background-color: #bdc3c7;
+}
+
+.quantity-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #3498db;
+    -fx-min-width: 25px; /* Give it some space */
+    -fx-alignment: center;
+    -fx-font-size: 15px;
+}
+
+/* Total and Checkout Area */
+.total-label {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 15px 0;
+}
+
+.checkout-button {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.3, 0, 1);
+}
+
+.checkout-button:hover {
+    -fx-background-color: #2ecc71;
+}
+
+.clear-button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.clear-button:hover {
+    -fx-background-color: #c0392b;
+}
+
+
+/* Custom Dialog Styling */
+.dialog-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #27ae60;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 0);
+}
+
+.dialog-pane-error {
+    -fx-border-color: #e74c3c;
+}
+
+.dialog-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.dialog-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-padding: 8 25;
+    -fx-cursor: hand;
+}
+
+.dialog-button:hover {
+    -fx-background-color: #2980b9;
+}

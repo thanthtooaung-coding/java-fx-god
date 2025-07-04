@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javafxgod.cafe.CafeController">
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="scroll-pane" BorderPane.alignment="CENTER">
+            <content>
+                <TilePane fx:id="menuTilePane" hgap="20" prefColumns="4" vgap="20">
+                    <padding>
+                        <Insets bottom="20" left="20" right="20" top="20" />
+                    </padding>
+                </TilePane>
+            </content>
+        </ScrollPane>
+    </center>
+    <right>
+        <VBox fx:id="orderPane" alignment="TOP_CENTER" prefWidth="350.0" spacing="10.0" styleClass="order-pane" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+            <children>
+                <Label styleClass="header-label" text="Current Order">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <ListView fx:id="orderListView" prefHeight="2000.0" styleClass="list-view" VBox.vgrow="ALWAYS" />
+                <VBox alignment="CENTER_RIGHT" spacing="10.0">
+                    <children>
+                        <Label fx:id="totalLabel" styleClass="total-label" text="Total: \$0.00">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="checkoutButton" mnemonicParsing="false" onAction="#handleCheckout" prefHeight="50.0" prefWidth="310.0" styleClass="checkout-button" text="Checkout" />
+                        <Button fx:id="clearButton" mnemonicParsing="false" onAction="#handleClearOrder" prefHeight="50.0" prefWidth="310.0" styleClass="clear-button" text="Clear Order" />
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </right>
+</BorderPane>
